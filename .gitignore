@@ -1,0 +1,68 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testing / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# FastAPI / Uvicorn temporary files
+*.pid
+```
+
+**Important:** This will prevent `ecommerce.db` from being pushed to GitHub, which is what you generally want. Your database is generated locally when you run the application.
+
+Your GitHub repository can therefore contain:
+
+```text
+ecommerce_api/
+│
+├── main.py
+├── database.py
+├── models.py
+├── schemas.py
+├── exceptions.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
